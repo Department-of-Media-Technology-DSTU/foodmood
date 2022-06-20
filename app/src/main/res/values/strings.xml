@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food Mood</string>
+    <string name="add_meal">Добавить приём пищи</string>
+    <string name="use_template">Использовать шаблон</string>
+    <string name="copy_day_from_other_day">Скоприровать из…</string>
+    <string name="add_food">Добавить продукт</string>
+</resources>
