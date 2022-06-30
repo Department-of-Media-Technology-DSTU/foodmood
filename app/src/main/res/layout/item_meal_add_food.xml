@@ -1,16 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/meal_add_food_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
     android:paddingVertical="8dp"
-    android:paddingHorizontal="16dp">
+    android:paddingStart="16dp"
+    android:paddingEnd="0dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/addFoodBtn"
-        style="@style/Widget.Material3.Button.OutlinedButton"
+    <androidx.appcompat.widget.AppCompatImageView
+        style="@style/nutsSummaryCircle"
+        android:backgroundTint="#fc7828" />
+
+    <TextView
+        android:id="@+id/carbsTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_food"/>
+        tools:text="8.6 g" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        style="@style/nutsSummaryCircle"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#471eaf" />
+
+    <TextView
+        android:id="@+id/fatsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="8.6 g" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        style="@style/nutsSummaryCircle"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#1cbbdd" />
+
+    <TextView
+        android:id="@+id/proteinsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="8.6 g" />
+
+
+    <!--        <com.google.android.material.button.MaterialButton-->
+    <!--            style="@style/Widget.Material3.Button.OutlinedButton.Icon"-->
+    <!--            app:icon="@drawable/ic_more"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="@string/add_food"/>-->
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/addFoodBtn"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_add"
+        android:tint="?colorOnSurface" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/infoBtn"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_more"
+        android:tint="?colorOnSurface" />
 
 </LinearLayout>

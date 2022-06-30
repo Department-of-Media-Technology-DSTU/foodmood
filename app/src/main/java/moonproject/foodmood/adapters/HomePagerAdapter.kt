@@ -13,9 +13,17 @@ class HomePagerAdapter(fragment: Fragment, private val itemsCount: Int) : Fragme
     override fun createFragment(position: Int): Fragment {
         val fragment = DayInfoFragment()
         fragment.arguments = Bundle().apply {
-            putInt(DayInfoFragment.ARG_CURRENT_POSITION, position - 2)
+            putInt(DayInfoFragment.ARG_CURRENT_POSITION, parseDaysOffset(position))
         }
         return fragment
+    }
+
+
+
+    companion object {
+
+        fun parseDaysOffset(position: Int) = position - 2
+
     }
 
 }

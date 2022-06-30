@@ -12,10 +12,26 @@
         <entry key="..\:/Users/MoonDayJ/StudioProjects/FoodMood/app/src/main/res/layout/item_meal_add_meal.xml" value="0.209375" />
         <entry key="..\:/Users/MoonDayJ/StudioProjects/FoodMood/app/src/main/res/layout/item_meal_food.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/MoonDayJ/StudioProjects/FoodMood/app/src/main/res/layout/item_meal_header.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/meal_add_food_bg.xml" value="0.2685" />
+        <entry key="app/src/main/res/drawable/meal_header_bg.xml" value="0.2685" />
+        <entry key="app/src/main/res/drawable/nutrients_circle.xml" value="0.2685" />
+        <entry key="app/src/main/res/drawable/nutrients_circle_inside.xml" value="0.2685" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/dialog_add_food.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/dialog_add_meal.xml" value="0.1887031408308004" />
+        <entry key="app/src/main/res/layout/fragment_day_info.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/fragment_food_info.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/include_fragment_home_header.xml" value="0.4049270629882813" />
+        <entry key="app/src/main/res/layout/item_food_find.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/item_food_info.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/item_meal_add_food.xml" value="0.5363499527374215" />
+        <entry key="app/src/main/res/layout/item_meal_food.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/item_meal_header.xml" value="0.3880208333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

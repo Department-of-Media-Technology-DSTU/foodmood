@@ -3,36 +3,44 @@ package moonproject.foodmood.ui
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_day_info.*
 import moonproject.foodmood.R
 import moonproject.foodmood.adapters.MealsAdapter
-import moonproject.foodmood.models.MealsAdapterData
+import moonproject.foodmood.adapters.MealsClickActions
 
 class DayInfoFragment : Fragment(R.layout.fragment_day_info) {
+
+
+    private val viewModel: MainViewModel by activityViewModels()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val daysOffset = arguments?.getInt(ARG_CURRENT_POSITION) ?: throw NullPointerException("daysOffset arg not found!")
 
-        val mealsData = listOf(
-            MealsAdapterData.Header("Завтрак"),
-            MealsAdapterData.Food("some eatable food"),
-            MealsAdapterData.Food("some eatable food 1"),
-            MealsAdapterData.Food("some eatable food 2"),
-            MealsAdapterData.AddFood(),
+        val mealsClickActions = object : MealsClickActions {
 
-            MealsAdapterData.Header("Обэд"),
-            MealsAdapterData.Food("some eatable food7"),
-            MealsAdapterData.AddFood(),
+            override fun addFood(mealIndex: Int) {
+                viewModel.initNewFoodParams(daysOffset, mealIndex)
+                findNavController().navigate(R.id.addFoodDialog)
+            }
 
-            MealsAdapterData.Header("Ужин"),
-            MealsAdapterData.Food("some eatable food 1"),
-            MealsAdapterData.Food("some eatable food 4"),
-            MealsAdapterData.AddFood(),
+            override fun addMeal(mealName: String, mealsAdapter: MealsAdapter) {
+                viewModel.addMeal(daysOffset, mealName)
 
-            MealsAdapterData.AddMeal(),
+                mealsAdapter.updateData(
+                    viewModel.getData(daysOffset)
+                )
+
+            }
+        }
+
+        val adapter = MealsAdapter(mealsClickActions)
+
+        adapter.updateData(
+            viewModel.getData(daysOffset)
         )
-        val adapter = MealsAdapter(mealsData)
 
         dayInfoList.adapter = adapter
     }

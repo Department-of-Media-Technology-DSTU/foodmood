@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="moonproject.foodmood.ui.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/addFoodDialog"
+        android:name="moonproject.foodmood.ui.AddFoodFragment"
+        android:label="AddFoodDialog" >
+        <action
+            android:id="@+id/action_addFoodDialog_to_foodInfoFragment"
+            app:destination="@id/foodInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodInfoFragment"
+        android:name="moonproject.foodmood.ui.FoodInfoFragment"
+        android:label="fragment_food_info"
+        tools:layout="@layout/fragment_food_info" >
+        <argument
+            android:name="foodInfoId"
+            app:argType="long" />
+        <argument
+            android:name="foodName"
+            app:argType="string" />
+        <argument
+            android:name="foofDescription"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_foodInfoFragment_to_homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_foodInfoFragment_self"
+            app:destination="@id/foodInfoFragment" />
+    </fragment>
+</navigation>

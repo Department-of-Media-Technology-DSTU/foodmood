@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/meal_header_bg"
+    android:orientation="horizontal"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="12dp"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    tools:text="Breakfast">
+    android:paddingTop="12dp"
+    android:paddingBottom="6dp">
 
-</TextView>
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Breakfast"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/kcalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="127kcal"
+        android:textColor="#68bdfd"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"/>
+
+
+</LinearLayout>

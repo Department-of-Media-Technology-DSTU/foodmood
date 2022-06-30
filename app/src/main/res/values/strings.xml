@@ -4,4 +4,10 @@
     <string name="use_template">Использовать шаблон</string>
     <string name="copy_day_from_other_day">Скоприровать из…</string>
     <string name="add_food">Добавить продукт</string>
+    <string name="meal_name_hint">Название приема пищи</string>
+    <string name="start_search_hint">Начните поиск</string>
+    <string name="nothing_found">Ничего не найдено :(</string>
+    <string name="enter_mass">Введите массу, грамм</string>
+    <string name="save_food">Добавить</string>
+
 </resources>
